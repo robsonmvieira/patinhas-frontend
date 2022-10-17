@@ -20,11 +20,9 @@ jobs:
       with:
         node-version: 16.x
 
-    - name: Install Yarn
-      run: npm install yarn
 
     - name: Install Dependencies
-      run: yarn install
+      run: yarn --force
 
     - name: Generate project Build
       run: npm run build
