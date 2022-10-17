@@ -14,17 +14,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Use Nodejs v16.17.0
       uses: actions/setup-node@v3
       with:
         node-version: 16.x
-        cache: 'npm'
 
-
-        # - run: npm ci
+    - name: Install Yarn
+      run: npm install yarn
 
     - name: Install Dependencies
-      run: npm install
+      run: yarn install
 
     - name: Generate project Build
       run: npm run build
