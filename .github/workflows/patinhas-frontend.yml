@@ -19,13 +19,16 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
-        
-        
+
+
         # - run: npm ci
-    
+
+    - name: Install Dependencies
+      run: npm install
+
     - name: Generate project Build
       run: npm run build
-    
+
     - name: Configure AWS CREDENTIALS
       uses: aws-actions/configure-aws-credentials@v1
       with:
