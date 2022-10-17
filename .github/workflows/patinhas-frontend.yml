@@ -34,4 +34,4 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
     - name: Update Bucket
-      run: aws s3 cp build/ s3://patinhas-frontend --recursive
+      run: aws s3 cp dist/ s3://patinhas-frontend --recursive
