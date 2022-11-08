@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import Register from '.'
+import { Register } from '.'
 
 describe('TopNavBar', () => {
   it('should render TopNavBar', () => {
